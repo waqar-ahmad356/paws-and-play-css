@@ -4,3 +4,14 @@ function toggleMenu() {
     menu.classList.toggle("active");
     button.classList.toggle("active");
   }
+
+  const navbar=document.querySelector('.navbar')
+
+  window.addEventListener('scroll',()=>{
+    if(window.scrollY>50){
+        navbar.classList.add('scrolled');
+    }
+    else{
+        navbar.classList.remove('scrolled');
+    }
+  })
