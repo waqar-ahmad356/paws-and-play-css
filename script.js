@@ -15,3 +15,5 @@ function toggleMenu() {
         navbar.classList.remove('scrolled');
     }
   })
+   // Set the current year dynamically
+   document.getElementById("year").textContent = new Date().getFullYear();
