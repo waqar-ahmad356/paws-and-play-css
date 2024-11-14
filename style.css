@@ -679,7 +679,12 @@ box-shadow: 5px 4px 10.9px 0px rgba(0, 0, 0, 0.10);
     grid-template-columns: 1fr 1fr;
     gap: 80px;
   }
-  .about-content .description{
+  .about-content .about-description{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .about-description .description{
     color: #101828;
 
 font-size: 21px;
