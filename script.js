@@ -2,10 +2,13 @@
 function toggleMenu() {
     const navbarMenu = document.getElementById('navbar-menu');
     const navbtn = document.getElementById('nav-btn');
+    const overlay = document.getElementById('overlay'); // Overlay element
   
     // Toggle 'active' class for menu and button
     navbarMenu.classList.toggle('active');
     navbtn.classList.toggle('active');
+    overlay.classList.toggle('active')
+
   
     // Toggle 'no-scroll' class on body to lock/unlock scrolling
     if (navbarMenu.classList.contains('active')) {
@@ -18,10 +21,12 @@ function toggleMenu() {
   function hideNavbar() {
     const sideNavbar = document.getElementById('navbar-menu');
     const sideNavbarbtn = document.getElementById('nav-btn');
+    const overlay = document.getElementById('overlay'); // Overlay element
   
     // Remove 'active' class
     sideNavbar.classList.remove('active');
     sideNavbarbtn.classList.remove('active');
+    overlay.classList.remove('active')
   
     // Remove 'no-scroll' class on body to unlock scrolling
     document.body.classList.remove('no-scroll');
@@ -32,11 +37,13 @@ function toggleMenu() {
     const navbarMenu = document.getElementById('navbar-menu');
     const navbtn = document.getElementById('nav-btn');
     const toggleButton = document.querySelector('.toggle-button');
+    const overlay = document.getElementById('overlay'); // Overlay element
   
     if (!navbarMenu.contains(event.target) && !toggleButton.contains(event.target)) {
       navbarMenu.classList.remove('active');
       navbtn.classList.remove('active');
       document.body.classList.remove('no-scroll'); // Unlock scrolling
+      overlay=document.classList.remove('active')
     }
   });
   
