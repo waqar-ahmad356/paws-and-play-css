@@ -1188,7 +1188,7 @@ line-height: 100%; /* 20px */
     background:#101828;
   }
   .error-message {
-    margin-top: 5px;
+    
     color: red;
     font-size: 0.9rem;
   }
