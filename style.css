@@ -245,18 +245,15 @@ box-shadow: 5px 4px 10.9px 0px rgba(0, 0, 0, 0.10);
     background: rgba(105, 65, 198, 0);
     padding: 16px 28px;
     font-family: "Poppins";
- 
-}
-.hero-btns{
-   
+    
     display: flex;
     
     justify-content: center;
     align-items: center;
     gap: 12px;
-   
-
+ 
 }
+
 
 /*---------------------responsive----------------------*/
 @media (min-width: 992px) {
