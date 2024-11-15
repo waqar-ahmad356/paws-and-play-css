@@ -132,6 +132,9 @@
   font-size: 1.5rem;
   cursor: pointer;
 }
+.responsive-logo{
+    display: none;
+}
 /* Default navbar style */
 .navbar {
     z-index: 100000;
@@ -154,60 +157,68 @@ box-shadow: 5px 4px 10.9px 0px rgba(0, 0, 0, 0.10);
 
 }
 @media (max-width: 768px) {
-  .navbar {
-    position: sticky;
-    top: 0;
-  }
-
-  .toggle-button {
-    display: block;
-  }
-
-  /* Initially hide navbar menu and button on small screens */
-  .navbar-menu
-   {
-    display: none;
-    position: absolute;
-    top: 50px;
-    z-index: 100000;
-  }
-  .nav-btn{
-    display: none;
-    position: absolute;
-    z-index: 100000;
-    top: 210px;
-
-  }
-
-  /* Show them when the toggle button is clicked */
-  .navbar-menu.active
-  {
-    display: flex;
-  }
-  .nav-btn.active{
-    display: none;
-  }
-
-
-  /* Adjust styling for small screens */
-  .navbar-menu {
-    flex-direction: column;
-    width: 90%;
-    gap: 0.5rem;
-    padding: 20px;
-    background : #101548;
-    border-radius: 10px;
-  }
-
-  .nav-btn {
-    justify-content: center;
-    font-size: 15px;
-    
-    background: red;
-    width: 90%;
-    
-  }
-}
+    .responsive-logo{
+        display: block;
+    }
+    .navbar-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Initially hidden */
+        height: 100%;
+        width: 250px;
+        background: #101548;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 40px;
+        gap: 16px;
+        transition: right 0.3s ease; /* Smooth sliding */
+        z-index: 100000;
+      }
+      
+      .navbar-menu.active {
+        right: 0; /* Slide into view */
+      }
+      
+      /* Adjust styles for the toggle button */
+      .toggle-button {
+        display: block;
+        z-index: 100001;
+      }
+      
+      /* Close button inside the menu (optional) */
+      .navbar-menu .close-btn {
+       
+        position: absolute;
+        top: 600px;
+        right: 10px;
+        font-size: 1.5rem;
+        color: #fff;
+        cursor: pointer;
+        background: none;
+        border: none;
+      }
+      
+      /* Responsive nav-btn */
+      .nav-btn {
+       
+        position: fixed;
+        bottom: 80px;
+        right: 90px;
+        background: #fff;
+        color: black;
+        padding: 10px 20px;
+        border-radius: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: left 0.3s ease;
+        z-index: 100001;
+        display: none
+      }
+      
+      .nav-btn.active {
+        display: flex;
+      }
+    }
 
 /*-------------------------hero section-----------------------*/
 .hero-container {

@@ -1,9 +1,20 @@
 function toggleMenu() {
-    const menu = document.getElementById("navbar-menu");
-    const button = document.getElementById("nav-btn");
-    menu.classList.toggle("active");
-    button.classList.toggle("active");
+    const navbarMenu = document.getElementById("navbar-menu");
+    navbarMenu.classList.toggle("active"); // Add or remove the 'active' class
+    const navbtn=document.getElementById('nav-btn');
+    navbtn.classList.toggle("active");
   }
+  
+  // Optional: Close menu when clicking outside
+  document.addEventListener("click", function (event) {
+    const navbarMenu = document.getElementById("navbar-menu");
+    const toggleButton = document.querySelector(".toggle-button");
+  
+    if (!navbarMenu.contains(event.target) && !toggleButton.contains(event.target)) {
+      navbarMenu.classList.remove("active");
+    }
+  });
+  
 
   const navbar=document.querySelector('.navbar')
 
