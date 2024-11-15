@@ -166,7 +166,8 @@
     right: -100%; /* Initially hidden */
     height: 100%;
     width: 250px;
-    background: #101548;
+    background: linear-gradient(87deg, #101828 0.18%, #233250 99.39%);
+    box-shadow: 5px 4px 10.9px 0px rgba(0, 0, 0, 0.1);
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
