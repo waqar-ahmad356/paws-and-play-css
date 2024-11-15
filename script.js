@@ -56,6 +56,7 @@ function toggleMenu() {
     if (lastName.value.trim() === "") {
       showError(lastName, "Last name is required.");
     }
+    
   
     // Validate Email
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
@@ -92,19 +93,23 @@ function toggleMenu() {
     const emailInput = document.getElementById('email-input');
     const emailError = document.getElementById('email-error');
   
+  
     // Add an event listener for form submission
     form.addEventListener('submit', function (event) {
       event.preventDefault(); // Prevent the form from submitting
   
       // Clear any previous error message
       emailError.textContent = "";
+     
   
       // Validate the email
       const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
       if (!emailInput.value.trim()) {
         emailError.textContent = "Email is required.";
+        
       } else if (!emailInput.value.match(emailPattern)) {
         emailError.textContent = "Please enter a valid email address.";
+        
       } else {
         // If valid, proceed with submission logic (e.g., AJAX call, etc.)
         alert("Thank you for subscribing!");
