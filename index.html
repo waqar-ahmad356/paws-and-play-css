@@ -48,7 +48,9 @@
           </div>
 
           <div class="navbar-menu" id="navbar-menu">
+            <button class="close-btn" onclick="hideNavbar()">&#10006</button>
             <div style="margin-bottom: 30px;" class="responsive-logo">
+                
             <a href="#" ><img src="./assets/logo.png"/></a>
         </div>
             <a class="fw-600 fs-16" href="#">Shop</a>
@@ -58,7 +60,7 @@
             <a class="fw-600 fs-16" href="#">Contact</a>
           </div>
         </div>
-        <div class="toggle-button" onclick="toggleMenu()"><img src="./assets/toggle-icon.png" width="30" height="30" alt="toggle-icon"/></div>
+        <div class="toggle-button" id="toggle-btn" onclick="toggleMenu()"><img src="./assets/toggle-icon.png" width="30" height="30" alt="toggle-icon"/></div>
         <div id="nav-btn" class="nav-btn" style="cursor: pointer;">
           <button type="button" class="  bg-white border-0 fw-600 fs-16">
             Get Started
