@@ -82,14 +82,15 @@
                 moment with your pet pawsitively perfect!"
               </p>
             </div>
-            <div class="hero-btn">
+            <div class="hero-btns">
               <button
                 type="button"
-                class="border-0 bg-transparent text-white fs-18"
+                class="bg-transparent text-white fs-18 hero-btn hero-btns"
               >
                 Shop Now
-              </button>
+             
               <img src="./assets/dog-foot-icon.png" width="32" height="32" alt="dog-foot-icon" />
+            </button>
             </div>
           </div>
         </div>
@@ -259,9 +260,7 @@
                         <button type="button " class="border-0 bg-transparent text-white">Read more</button>
                     </div>
                 </div>
-                <div class="blog-right">
-                    <a href="#"><img src="./assets/play-icon.png" alt="play-icon"/></a>
-                </div>
+                
             </div>
 
         </div>
@@ -365,7 +364,17 @@
                     </div>
                 </div>
                 <div class="blog-right">
-                    <a href="#"><img src="./assets/play-icon.png" alt="play-icon"/></a>
+                    <a onclick="openModal()" style="cursor: pointer;">
+                    <img src="./assets/play-icon.png"  alt="play-icon"/>
+                </a>
+                </div>
+                
+                <!-- Video Modal -->
+                <div id="video-modal" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <iframe id="video-frame" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
                 </div>
             </div>
 
@@ -387,38 +396,38 @@
             </div>
             <div class="contact-content">
                 <div class="contact-left">
-                    <form>
+                    <form id="form">
                 <div class="input-form">
                     <div class="input-fields">
                     <div class="input-name">
                         <div class="f-name">
                             <label>First Name</label>
-                            <input type="text" placeholder="First Name" required>
+                            <input type="text" placeholder="First Name" >
                         </div>
                         <div class="l-name">
                             <label>Last Name</label>
-                            <input type="text" placeholder="Last Name" required >
+                            <input type="text" placeholder="Last Name"  >
                         </div>
                     </div>
                     <div class="input-email">
                         
                             <label>Email</label>
-                            <input type="text" placeholder="you@company.com" required >
+                            <input type="text" placeholder="you@company.com" >
                        
                     </div>
                     <div class="input-message">
                         <label>Message</label>
-                        <textarea rows="3" required></textarea>
+                        <textarea rows="3" ></textarea>
                     </div>
                     <div class="check-policy">
-                        <input type="checkbox" required/>
+                        <input type="checkbox" />
                         <span>You agree to our friendly <a href="#">privacy policy</a>.</span>
                     </div>
                 </div>
                
-                <div class="send-message-btn" >
-                    <button type="submit" class="border-0 bg-transparent">Send Message</button>
-                </div>
+                
+                    <button type="submit" class="border-0 bg-transparent send-message-btn text-white">Send Message</button>
+                
             </div>
                 </form>
                 </div>
@@ -475,10 +484,13 @@
                             <h2 class="mb-0">Join our newsletter</h2>
                             <p class="mb-0">Be the first to receive latest updates on promo, sales and offers</p>
                         </div >
-                        <div class="footer-top-right">
-                            <input type="email" placeholder="Enter your email" required>
-                            <button type="button">Subscribe</button>
-                        </div>
+                        <form class="footer-top-right">
+                            <div class="input-container">
+                              <input type="text" id="email-input" placeholder="Enter your email">
+                              <div class="error-message" id="email-error"></div> <!-- Error message placeholder -->
+                            </div>
+                            <button type="submit">Subscribe</button>
+                          </form>
                     </div>
                 </div>
                 <div class="footer-center">
