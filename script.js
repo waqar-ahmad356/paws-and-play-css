@@ -60,9 +60,16 @@ function toggleMenu() {
   
     // Validate Email
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    if (!email.value.match(emailPattern)) {
+    
+    if(!email.value.trim()){
+        showError(email, "Please enter a email address.");
+
+    }
+
+    else if (!email.value.match(emailPattern)) {
       showError(email, "Please enter a valid email address.");
     }
+    
     
   
     // Validate Message
